@@ -12,10 +12,10 @@
         </tr>
     <?php foreach ($this->orders as $id => $order) { ?>
         <tr>
-            <td><?php echo $id; ?></td>
+            <td><?= $order->id ?></td>
             <td><?php echo $order->getDate($this->dateFormat); ?></td>
             <td><?php echo $order->getCustomer()->getName(); ?></td>
-            <td><a href="/index.php/orders/display?id=<?php echo $id; ?>">View Order</a></td>
+            <td><a href="/orders/display?id=<?= $order->id ?>">View Order</a></td>
         </tr>
     <?php } ?>
     </table>
