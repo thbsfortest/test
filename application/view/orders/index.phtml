@@ -10,7 +10,7 @@
             <th style="width: 200px">Customer</th>
             <th>Actions</th>
         </tr>
-    <?php foreach ($this->orders as $id => $order) { ?>
+    <?php foreach ($this->orders as $order) { ?>
         <tr>
             <td><?= $order->id ?></td>
             <td><?php echo $order->getDate($this->dateFormat); ?></td>
