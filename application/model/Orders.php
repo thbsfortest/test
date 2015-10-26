@@ -31,7 +31,7 @@ class Orders extends ModelAbstract
     public function getById($id)
     {
         foreach ($this as $order) {
-            if ($order->id === $id) {
+            if (intval($order->id) === $id) {
                 return $order;
             }
         }
