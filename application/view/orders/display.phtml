@@ -1,0 +1,74 @@
+<?php include 'header.phtml'; ?>
+
+<a href="/orders/">back</a>
+
+<h2>Order</h2>
+<div id="content">
+	<p>&nbsp;</p>
+
+	<p>Order info:</p>
+	<table>
+		<tr>
+			<td>ID</td>
+			<td><?= $this->order->id ?></td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td><?= $this->order->getDate($this->dateFormat) ?></td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td><?= $this->order->getDate($this->dateFormat) ?></td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+
+	<p>Customer info:</p>
+	<table>
+		<tr>
+			<td>ID</td>
+			<td><?= $this->customer->id ?></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><?= $this->customer->getName() ?></td>
+		</tr>
+		<tr>
+			<td>ID</td>
+			<td><a href="mailto:<?= $this->customer->email ?>"><?= $this->customer->email ?></a></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><?= $this->customer->getAddress() ?></td>
+		</tr>
+	</table>
+
+	<p>&nbsp;</p>
+
+	<p>Products info:</p>
+
+	<?php foreach ($this->products as $products) { ?>
+		<table>
+
+			<tr>
+				<td>ID</td>
+				<td><?= $products->id ?></td>
+			</tr>
+			<tr>
+				<td>Code</td>
+				<td><?= $products->code ?></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td><?= $products->description ?></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><?= $products->price ?></td>
+			</tr>
+
+		</table>
+	<?php } ?>
+</div>
+
+<?php include 'footer.phtml'; ?>
