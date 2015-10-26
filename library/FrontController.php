@@ -30,7 +30,7 @@ class FrontController
      * @var array
      */
     private $_urlManager = array(
-        '#^/(?P<controller>\w+)?(?:/(?P<id>\d+))?#',
+        '#^/(?P<controller>\w+)?(?:/(?P<id>\d+))#',
         '#^/(?P<controller>\w+)?(?:/(?P<action>\w+))?#'
     );
 
@@ -90,7 +90,7 @@ class FrontController
             'controllerClass' => ucfirst($route['controller']) . 'Controller',
             'action'          => $route['id'] ? self::DEFAULT_ACTION_FOR_ID : $route['action'],
             'actionMethod'    => $route['id'] ? self::DEFAULT_ACTION_FOR_ID . 'Action' : $route['action'] . 'Action',
-            'id'              => $route['id'],
+            'id'              => $route['id'] ? $route['id'] : (!empty($_GET["id"]) ? $_GET["id"] : 0),
         );
 
         return $this;
