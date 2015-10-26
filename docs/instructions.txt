@@ -1,0 +1,61 @@
+Everything Everywhere
+Customer Interactions Technical Test
+
+Brief
+
+The purpose of the test is to extend an existing order viewing application to add functionality
+based on user requirements. The source data for the application is stored in XML and is displayed
+to the user in an MVC architecture.
+
+The test consists of 3 stages, the last of which is an optional exercise. It should take 2 hours to
+complete, after which time you should send everything back in a ZIP file. If you have not completed
+the test within the time, send back what you have managed to complete; you may continue with the
+test afterwards and send your completed work if you wish to do so.
+
+Test Contents
+
+The archive contains the following directories:
+
+application    The main MVC system. Contains models, controllers and views for the application
+data           Source data for the products, customers and their orders
+docs           Test documentation, including these instructions
+library        Existing library code to support the MVC application
+public         Public-facing code and assets
+
+Prerequisites
+
+You will need to have installed a copy of PHP 5.2 or greater and a Web server. Apache HTTP server
+is recommended, but configuration options are provided for other Web servers.
+
+The server should be configured so that the Web root points to the public directory in the source.
+
+PHPUnit (https://github.com/sebastianbergmann/phpunit/) is required for Stage 4. To run phpunit, on 
+command line navigate to the root directory and run "phpunit".
+
+Stage 1
+
+The existing application can display basic information about the list of orders held within the
+system. The application needs to be extended to view detailed information about each of those
+orders.
+
+Create the "display" action and an associated view to display a single order. The page needs to
+include all the attributes of the customer and details of all of the products in their order.
+
+Stage 2
+
+A bug exists in the existing view logic for displaying the orders. Locate and fix the bug to
+display the correct order information.
+
+Stage 3 (optional)
+
+Change the routing for the controller so that individual orders are accessed at URLs like
+
+index.php/orders/1 instead of the existing index.php/orders/display?id=1. The request should
+be routed to the display action created in stage 1 and make use of the incoming URL to display
+the correct order.
+
+Stage 4 (optional)
+
+Create PHPUnit testcases for the “display” action created in Stage 1 and the routing changes 
+made in Stage 3.
+

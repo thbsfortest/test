@@ -1,0 +1,23 @@
+<?php include 'header.phtml'; ?>
+<h2>Orders</h2>
+<div id="content">
+    <p>Here are the current orders:</p>
+
+    <table>
+        <tr>
+            <th style="width: 100px">Order ID</th>
+            <th style="width: 200px">Date</th>
+            <th style="width: 200px">Customer</th>
+            <th>Actions</th>
+        </tr>
+    <?php foreach ($this->orders as $id => $order) { ?>
+        <tr>
+            <td><?php echo $id; ?></td>
+            <td><?php echo $order->getDate($this->dateFormat); ?></td>
+            <td><?php echo $order->getCustomer()->getName(); ?></td>
+            <td><a href="/index.php/orders/display?id=<?php echo $id; ?>">View Order</a></td>
+        </tr>
+    <?php } ?>
+    </table>
+</div>
+<?php include 'footer.phtml'; ?>

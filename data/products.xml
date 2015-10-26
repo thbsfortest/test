@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <id>1</id>
+        <code>AI4</code>
+        <description>Apple iPhone 4</description>
+        <price>509.99</price>
+    </product>
+    <product>
+        <id>2</id>
+        <code>BB9800</code>
+        <description>BlackBerry Torch 9800</description>
+        <price>249.99</price>
+    </product>
+    <product>
+        <id>3</id>
+        <code>HTCD</code>
+        <description>HTC Desire HD</description>
+        <price>99.99</price>
+    </product>
+    <product>
+        <id>4</id>
+        <code>LGO7</code>
+        <description>LG Optimus 7</description>
+        <price>149.99</price>
+    </product>
+    <product>
+        <id>5</id>
+        <code>N5230</code>
+        <description>Nokia 5230</description>
+        <price>79.99</price>
+    </product>
+    <product>
+        <id>6</id>
+        <code>SEX10</code>
+        <description>Sony Ericsson Xperia X10i</description>
+        <price>99.99</price>
+    </product>
+</products>

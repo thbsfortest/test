@@ -1,0 +1,329 @@
+<html>
+<head>
+<title>Docs For Class FrontController</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+<link rel="icon" href="/favicon.ico" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../media/left.js"></script>
+</head>
+<body>
+
+<div id="content">
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">TechTest</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                                        [ <a href="../classtrees_TechTest.html" class="menu">class tree: TechTest</a> ]
+          [ <a href="../elementindex_TechTest.html" class="menu">index: TechTest</a> ]
+                  [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu" id="menu">
+      <b>Packages:</b><br />
+        <div class="package">
+              <a href="../li_TechTest.html">TechTest</a><br />
+            </div>
+      <br /><br />
+                        <b>Files:</b><br />
+            <div class="package">
+            <a href="../TechTest/_library---Application.php.html">        Application.php
+        </a><br />
+            <a href="../TechTest/_library---Bootstrap.php.html">        Bootstrap.php
+        </a><br />
+            <a href="../TechTest/_library---ControllerAbstract.php.html">        ControllerAbstract.php
+        </a><br />
+            <a href="../TechTest/_application---model---Customer.php.html">        Customer.php
+        </a><br />
+            <a href="../TechTest/_application---model---Customers.php.html">        Customers.php
+        </a><br />
+            <a href="../TechTest/_application---controller---DefaultController.php.html">        DefaultController.php
+        </a><br />
+            <a href="../TechTest/_library---FrontController.php.html">        FrontController.php
+        </a><br />
+            <a href="../TechTest/_public---index.php.html">        index.php
+        </a><br />
+            <a href="../TechTest/_application---model---ModelAbstract.php.html">        ModelAbstract.php
+        </a><br />
+            <a href="../TechTest/_application---model---Order.php.html">        Order.php
+        </a><br />
+            <a href="../TechTest/_application---model---Orders.php.html">        Orders.php
+        </a><br />
+            <a href="../TechTest/_application---controller---OrdersController.php.html">        OrdersController.php
+        </a><br />
+            <a href="../TechTest/_application---model---Product.php.html">        Product.php
+        </a><br />
+            <a href="../TechTest/_application---model---Products.php.html">        Products.php
+        </a><br />
+            <a href="../TechTest/_library---View.php.html">        View.php
+        </a><br />
+      </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+                    <a href="../TechTest/Application.html">Application</a><br />
+                <a href="../TechTest/Bootstrap.html">Bootstrap</a><br />
+                <a href="../TechTest/ControllerAbstract.html">ControllerAbstract</a><br />
+                <a href="../TechTest/Customer.html">Customer</a><br />
+                <a href="../TechTest/Customers.html">Customers</a><br />
+                <a href="../TechTest/DefaultController.html">DefaultController</a><br />
+                <a href="../TechTest/FrontController.html">FrontController</a><br />
+                <a href="../TechTest/ModelAbstract.html">ModelAbstract</a><br />
+                <a href="../TechTest/Order.html">Order</a><br />
+                <a href="../TechTest/Orders.html">Orders</a><br />
+                <a href="../TechTest/OrdersController.html">OrdersController</a><br />
+                <a href="../TechTest/Product.html">Product</a><br />
+                <a href="../TechTest/Products.html">Products</a><br />
+                <a href="../TechTest/View.html">View</a><br />
+      </div>
+                </td>
+    <td id="page">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: FrontController</h1>
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h2>Introduction</h2>
+<div class="description"><p>The purpose of this class is to initialise the request environment and route  the incoming request to the correct controller and action.</p></div>
+                        
+            
+            
+        <h4>Notes</h4>
+        <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                <td><b>Author:</b>&nbsp;&nbsp;</td><td>Customer Interactions &lt;<a href="mailto:tactical.cs@everythingeverywhere.com">tactical.cs@everythingeverywhere.com</a>&gt;</td>
+            </tr>
+                    
+        </table>
+            </td>
+</tr></table>
+
+<table width="100%" border="0"><tr>
+
+
+</tr></table>
+
+<hr />
+<h2 id="class_synopsis">Class synopsis</h2>
+
+                <pre class="class-synopsis">
+class <strong class="classname">FrontController</strong> {
+
+    <span class="comment">/* Constants */</span>
+    const string <var><a href="../TechTest/FrontController.html#constROUTE">ROUTE</a></var> = <span class="string">'#^/(?P&lt;controller&gt;\w+)?(?:/(?P&lt;action&gt;\w+))?#'</span> ;
+
+    <span class="comment">/* Properties */</span>
+    protected string[] <var><a href="../TechTest/FrontController.html#var$_defaults">$_defaults</a></var> = array( 'controller' =&gt; 'default', 'action' =&gt; 'index' ) ;
+    protected string[] <var><a href="../TechTest/FrontController.html#var$_request">$_request</a></var> = array( 'uri' =&gt; '', 'controller' =&gt; '', 'controllerClass' =&gt; '', 'action' =&gt; '', 'actionMethod' =&gt; '' ) ;
+
+    <span class="comment">/* Methods */</span>
+    public void <a href="../TechTest/FrontController.html#methoddispatch">dispatch</a> ( void ) ;
+    public string[] <a href="../TechTest/FrontController.html#methodgetRequest">getRequest</a> ( void ) ;
+    public void <a href="../TechTest/FrontController.html#methodhandleException">handleException</a> ( <a href="http://php.net/class.exception">Exception</a> <var>$exception</var> ) ;
+    public FrontController <a href="../TechTest/FrontController.html#methodsetRequest">setRequest</a> ( string <var>$requestUri</var> ) ;
+}
+</pre>
+<hr />
+<h2 id="class_consts">Constants</h2>
+<dl id="consts">    <dt id="constROUTE"><var>FrontController::ROUTE</var><samp> =  '#^/(?P&lt;controller&gt;\w+)?(?:/(?P&lt;action&gt;\w+))?#'</samp> <span class="line">(line 28)</span></dt>
+    <dd>Regular expression for the standard routing pattern</dd>
+</dl>
+<hr />
+<h2 id="class_vars">Properties</h2>
+<dl id="properties">    <dt id="var$_defaults">string[] <var>$_defaults</var> <span class="line">(line 35)</span></dt>
+    <dd>Default routing options</dd>
+    <dt id="var$_request">string[] <var>$_request</var> <span class="line">(line 45)</span></dt>
+    <dd>Request environment</dd>
+</dl>
+<hr />
+<h2 id="class_methods">Methods</h2>
+            <a name="methoddispatch"></a>
+        <h3>FrontController::dispatch</h3>
+        <p class="smalllinenumber">(line 98)</p>
+
+        <p class="refpurpose">FrontController::dispatch &mdash; Dispatch the current request</p>
+
+        <div class="method description">
+            <h4>Description</h4>
+
+                        <div class="methodsynopsis">
+            void            <strong>FrontController::dispatch</strong> (
+                        void
+                                    )</div>
+            <p><p>This function checks for the existence of the requested controller and  action and, if they exist, dispatches that action.</p></p>
+                                                                    </div>
+
+                
+        
+
+                                        
+        
+                                            
+            
+            <div class="method notes">
+        <h4>Notes</h4>
+        <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                <td><b>Access:</b>&nbsp;&nbsp;</td><td>public</td>
+            </tr>
+                    
+        </table>
+        </div>    
+              </div>
+      <hr />
+                <a name="methodgetRequest"></a>
+        <h3>FrontController::getRequest</h3>
+        <p class="smalllinenumber">(line 84)</p>
+
+        <p class="refpurpose">FrontController::getRequest &mdash; Get the request</p>
+
+        <div class="method description">
+            <h4>Description</h4>
+
+                        <div class="methodsynopsis">
+            string[]            <strong>FrontController::getRequest</strong> (
+                        void
+                                    )</div>
+            
+                                                                    </div>
+
+                
+        
+
+                        <div class="method return">
+            <h4>Return Values</h4>
+
+            <p>Returns the request environment.</p>
+        </div>
+
+                                
+        
+                                            
+            
+            <div class="method notes">
+        <h4>Notes</h4>
+        <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                <td><b>Access:</b>&nbsp;&nbsp;</td><td>public</td>
+            </tr>
+                    
+        </table>
+        </div>    
+              </div>
+      <hr />
+                <a name="methodhandleException"></a>
+        <h3>FrontController::handleException</h3>
+        <p class="smalllinenumber">(line 130)</p>
+
+        <p class="refpurpose">FrontController::handleException &mdash; Handle any exception thrown during processing of the request</p>
+
+        <div class="method description">
+            <h4>Description</h4>
+
+                        <div class="methodsynopsis">
+            void            <strong>FrontController::handleException</strong> (
+                                            <a href="http://php.net/class.exception">Exception</a>
+                <var>$exception</var>                                    )</div>
+            <p><p>This function displays the message of the exception.</p></p>
+                                            </div>
+
+                <div class="method parameters">
+            <h4>Parameters</h4>
+
+            <dl>
+                            <dt><var>exception</var></dt>
+                <dd>Exception to display.</dd>
+                        </dl>
+        </div>
+                
+        
+
+                        
+        
+                                
+            
+            <div class="method notes">
+        <h4>Notes</h4>
+        <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                <td><b>Access:</b>&nbsp;&nbsp;</td><td>public</td>
+            </tr>
+                    
+        </table>
+        </div>    
+              </div>
+      <hr />
+                <a name="methodsetRequest"></a>
+        <h3>FrontController::setRequest</h3>
+        <p class="smalllinenumber">(line 60)</p>
+
+        <p class="refpurpose">FrontController::setRequest &mdash; Initialise the request by parsing the request URI</p>
+
+        <div class="method description">
+            <h4>Description</h4>
+
+                        <div class="methodsynopsis">
+            <a href="../TechTest/FrontController.html">FrontController</a>            <strong>FrontController::setRequest</strong> (
+                                            string
+                <var>$requestUri</var>                                    )</div>
+            
+                                                                                            </div>
+
+                <div class="method parameters">
+            <h4>Parameters</h4>
+
+            <dl>
+                            <dt><var>requestUri</var></dt>
+                <dd>URI of the request.</dd>
+                        </dl>
+        </div>
+                
+        
+
+                        <div class="method return">
+            <h4>Return Values</h4>
+
+            <p>Provides a fluent interface.</p>
+        </div>
+
+                                                
+        
+                                                        
+            
+            <div class="method notes">
+        <h4>Notes</h4>
+        <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                <td><b>Access:</b>&nbsp;&nbsp;</td><td>public</td>
+            </tr>
+                    
+        </table>
+        </div>    
+              </div>
+      <hr />
+    
+        <div class="credit">
+            Documentation generated on Fri, 15 Apr 2011 16:42:39 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+          </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+</body>
+</html>

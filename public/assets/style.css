@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    display: block;
+}
+
+body {
+    background: #E1E1E1;
+    color: #939598;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1;
+}
+
+#wrapper {
+    background: url(/assets/wrapper-repeat.gif) repeat-y 0px 0px;
+    margin: 10px auto;
+    text-align: left;
+    width: 1040px;
+}
+
+#wrapper-top {
+    background: url(/assets/wrapper-top.gif) no-repeat 0px 0px;
+    height: 40px;
+}
+
+#container {
+    background: white;
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    width: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+#header {
+    display: inline;
+    float: left;
+    margin: 10px 30px 30px;
+    width: 940px;
+}
+
+
+#header h1 {
+    background: white url(/assets/everything-everywhere.gif) no-repeat 0px 0px;
+    float: left;
+    height: 134px;
+    width: 460px;
+    text-indent: -10000px;
+}
+
+
+
+#header #logos {
+    float: right;
+    margin-top: 76px;
+    width: 176px;
+}
+ol, ul {
+    list-style: none;
+}
+
+#header #logos li {
+    float: left;
+    width: 40px;
+}
+
+#header #logos li.t-mobile {
+    float: right;
+    margin-top: 21px;
+    width: 109px;
+}
+
+#header #logos li.t-mobile img {
+    float: right;
+}
+
+h2 {
+    background: #E6E7E8;
+    float: left;
+    padding: 10px 30px;
+    width: 940px;
+    color: #58585B;
+    font-size: 3.6em;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 32px;
+    margin-bottom: 0.8em;
+}
+
+p {
+    display: block;
+    color: #939598;
+    font-size: 1.2em;
+    line-height: 16px;
+    margin-bottom: 1.2em;
+}
+
+th, td {
+    font-size: 1.6em;
+}
+
+p a {
+    font-size: 1em;
+}
+
+a {
+    color: #424344;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#content {
+    padding: 10px 30px;
+    width: 940px;
+}
+
+#wrapper-bottom {
+    background: url(/assets/wrapper-footer.gif) no-repeat 0px 0px;
+    height: 40px;
+}
+
+
+#footer {
+    background: #EDEDED;
+    padding-bottom: 8px;
+    clear: both;
+    margin-left: 20px;
+    width: 1000px;
+}
+
+#footer p {
+    clear: both;
+    margin: 0px 0px 0px 30px;
+    padding-top: 20px;
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+#footer p span {
+    padding: 0 10px;
+}

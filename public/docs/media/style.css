@@ -1,0 +1,378 @@
+.php {
+    padding: 1em;
+}
+.php-src {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", Monaco, "Courier New", Courier, monospace;
+    font-weight: normal;
+}
+
+body
+{
+  color:              #000000;
+  background-color:   #ffffff;
+  background-image:   url("background.png");
+  background-repeat:  repeat-y;
+  font-family:        verdana, arial, sans-serif;
+  margin:             0;
+  padding:            0;
+}
+
+h1, h2, h3, h4 {
+    color: #006;
+}
+
+h3 {
+    font-size: 130%;
+}
+
+td {
+    font-size: 85%;
+}
+
+a
+{
+  color:              #000099;
+  background-color:   transparent;
+  text-decoration:    none;
+}
+
+a:hover, #page a {
+    text-decoration: underline;'
+}
+
+a:focus {
+    color: blue;
+}
+
+a.menu
+{
+  color:              #ffffff;
+  background-color:   transparent;
+}
+
+td.header_top
+{
+  color:              #ffffff;
+  background-color:   #9999cc;
+  font-size:          16pt;
+  font-weight:        bold;
+  text-align:         right;
+  padding:            10px;
+}
+
+td.header_line
+{
+  color:              #ffffff;
+  background-color:   #333366;
+}
+
+td.header_menu
+{
+  color:              #ffffff;
+  background-color:   #666699;
+  font-size:          8pt;
+  text-align:         right;
+  padding:            2px;
+  padding-right:      5px;
+}
+
+td.menu
+{
+  padding:                2px;
+  padding-left:            5px;
+  font-size:            11px;
+}
+
+td.code_border
+{
+  color:              #000000;
+  background-color:   #c0c0c0;
+}
+
+td.code
+{
+  color:              #000000;
+  background-color:   #f0f0f0;
+}
+
+td.type
+{
+  font-style:         italic;
+}
+
+div.credit
+{
+  font-size:          8pt;
+  text-align:         center;
+}
+
+div.package
+{
+  padding-left:       5px;
+}
+
+div.tags
+{
+  padding-left:       15px;
+}
+
+div.function
+{
+  padding-left:       15px;
+}
+
+div.top
+{
+  font-size:          8pt;
+}
+
+div.warning
+{
+  color:              #ff0000;
+  background-color:   transparent;
+}
+
+hr
+{
+  height:             1px;
+  border-style:       solid;
+  border-color:       #c0c0c0;
+  margin-top:         10px;
+  margin-bottom:      10px;
+}
+
+span.smalllinenumber
+{
+  font-size:          8pt;
+}
+
+ul {
+    margin-left:        0px;
+    padding-left:        8px;
+}
+/* Syntax highlighting */
+
+.src-code { background-color: #f5f5f5; border: 1px solid #ccc9a4; padding: 0 0 0 1em; margin : 0px;
+            font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", Monaco, "Courier New", Courier, monospace; font-weight: normal; }
+.src-line {  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", Monaco, "Courier New", Courier, monospace; font-weight: normal; }
+
+.src-comm { color: green; }
+.src-id {  }
+.src-inc { color: #0000FF; }
+.src-key { color: #0000FF; }
+.src-num { color: #CC0000; }
+.src-str { color: #66cccc; }
+.src-sym { font-weight: bold; }
+.src-var { }
+
+.src-php { font-weight: bold; }
+
+.src-doc { color: #009999 }
+.src-doc-close-template { color: #0000FF }
+.src-doc-coretag { color: #0099FF; font-weight: bold }
+.src-doc-inlinetag { color: #0099FF }
+.src-doc-internal { color: #6699cc }
+.src-doc-tag { color: #0080CC }
+.src-doc-template { color: #0000FF }
+.src-doc-var { color: #009999; }
+.src-doc-type { color: #009999; }
+
+.tute-tag { color: #009999 }
+.tute-attribute-name { color: #0000FF }
+.tute-attribute-value { color: #0099FF }
+.tute-entity { font-weight: bold; }
+.tute-comment { font-style: italic }
+.tute-inline-tag { color: #636311; font-weight: bold }
+
+/* tutorial */
+
+.authors {  }
+.author { font-style: italic; font-weight: bold }
+.author-blurb { margin: .5em 0em .5em 2em; font-size: 85%; font-weight: normal; font-style: normal }
+.example { border: 1px dashed #999999; background-color: #EEEEEE; padding: .5em; }
+.listing { border: 1px dashed #999999; background-color: #EEEEEE; padding: .5em; white-space: nowrap; }
+.release-info { font-size: 85%; font-style: italic; margin: 1em 0em }
+.ref-title-box {  }
+.ref-title {  }
+.ref-purpose { font-style: italic; color: #666666 }
+.ref-synopsis {  }
+.title { font-weight: bold; margin: 1em 0em 0em 0em; padding: .25em; border: 2px solid #999999; background-color: #9999CC  }
+.cmd-synopsis { margin: 1em 0em }
+.cmd-title { font-weight: bold }
+.toc { margin-left: 2em; padding-left: 0em; }
+
+.methodsynopsis {
+    background-color: #ffffff;
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+.method {
+    background-color: #eeeeff;
+    border: 2px solid #cccccc;
+    border-collapse: collapse;
+    margin: 1em;
+    padding: 1em;
+}
+
+.method h4 {
+    color: #000066;
+    border-bottom: 1px dashed #ffffff;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 1.1em;
+}
+
+.method a {
+    text-decoration: underline;
+}
+
+.parameters var {
+    border-bottom: 1px groove #dddddd;
+    font-style: italic;
+    font-weight: normal;
+}
+
+tt, .method var, samp, pre, code, dl#consts dt var {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", Monaco, "Courier New", Courier, monospace;
+}
+
+.parameters dd {
+    background-color: #f5f5ff;
+    border: 2px groove #ffffff;
+    margin: 0.5em 0 0.5em 2em;
+    padding: 0.5em;
+}
+
+.method samp {
+    font-weight: bold;
+    font-size: 125%;
+}
+
+.method ul {
+    margin-left: 0px;
+    padding-left: 40px;
+}
+
+.method li {
+    list-style-type: square;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.example {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 0;
+}
+
+.example p a {
+    color: black;
+}
+
+.example p {
+    border-bottom:1px dotted #000000;
+    margin:0;
+    padding:0.2em;
+    text-indent:1em;
+}
+
+.example-contents {
+    background-color:#E1E1E1;
+    border:1px outset #000000;
+    margin:10px;
+}
+
+.example .phpcode, .example .cdata {
+    padding: 0.5em;
+}
+
+.example .example-contents p {
+    background-color: #CCCCCC;
+    border-bottom: 1px outset #000000;
+    text-indent: 0;
+}
+
+.error {
+    color: #ff6666;
+}
+
+.method.deprecated {
+    color: red;
+    border-color: red;
+    background-color: #fdd;
+}
+
+.method.deprecated h4 {
+    color: red;
+    border-color: #fbb;
+}
+
+div.warning {
+    background-color: #FFEEEE;
+    border:    1px solid #666600;
+}
+
+div.warning, div.caution, div.tip {
+    margin:    20px;
+    padding: 20px 30px;
+    text-align:    center;
+}
+
+div.warning, div.warning p, div.warning h4 {
+    color: #660000;
+}
+
+td.menu a {
+    background: transparent url("box0.gif") center left no-repeat;
+    padding-left: 10px;
+}
+
+td.menu a.selected {
+    background: transparent url("box1.gif") center left no-repeat;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+dl#consts dt, dl#properties dt {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+dl#consts dd, dl#properties dd {
+    margin: 1.2em 0 1.2em 2em;
+    padding: 0.5em;
+}
+
+dl dt span.line {
+    float: right;
+    font-size: 85%;
+}
+
+dl#consts dt var {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.class-synopsis {
+    font-family: verdana, arial, sans-serif;
+    color: #007700;
+    background-color: #e1e1e1;
+    border: 1px outset #000000;
+    margin: 10px 0;
+    padding: 0.5em;
+}
+
+.class-synopsis .classname, .class-synopsis var {
+    color: #0000bb;
+}
+
+.class-synopsis .string {
+    color: #dd0000;
+}
+
+.class-synopsis .comment {
+    font-weight: bold;
+    color: #ff8000;
+}

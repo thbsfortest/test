@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+    <order>
+        <id>1</id>
+        <customer>1</customer>
+        <date>2010-02-25T14:03:00</date>
+        <products>
+            <product>6</product>
+        </products>
+    </order>
+    <order>
+        <id>2</id>
+        <customer>2</customer>
+        <date>2010-01-21T16:34:00</date>
+        <products>
+            <product>1</product>
+        </products>
+    </order>
+    <order>
+        <id>4</id>
+        <customer>1</customer>
+        <date>2010-03-01T09:59:00</date>
+        <products>
+            <product>3</product>
+            <product>2</product>
+            <product>1</product>
+        </products>
+    </order>
+</orders>

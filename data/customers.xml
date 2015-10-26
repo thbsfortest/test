@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+    <customer>
+        <id>1</id>
+        <name>
+            <title>Mr</title>
+            <given-name>Joe</given-name>
+            <surname>Public</surname>
+        </name>
+        <email>joe.public@example.com</email>
+        <address>
+            <street>1 St James Court</street>
+            <locality>Bradley Stoke</locality>
+            <town>Bristol</town>
+            <postcode>BS32 4QJ</postcode>
+        </address>
+    </customer>
+    <customer>
+        <id>2</id>
+        <name>
+            <title>Mr</title>
+            <given-name>John</given-name>
+            <surname>Doe</surname>
+        </name>
+        <email>john.doe@example.com</email>
+        <address>
+            <street>6 Camberwell Way</street>
+            <locality>Doxford</locality>
+            <town>Sunderland</town>
+            <postcode>SR3 3XN</postcode>
+        </address>
+    </customer>
+</customers>
