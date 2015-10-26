@@ -1,0 +1,9 @@
+{
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "config": {
+    "vendor-dir": "vendors",
+    "discard-changes": true
+  }
+}
