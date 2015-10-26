@@ -43,17 +43,14 @@ class OrdersController extends ControllerAbstract
      *
      * The page needs to include all the attributes of the customer and details of all of the products in their order.
      *
+     * @param int $id Order ID
+     *
      * @throws Exception
      *
      * @return void
      */
-    public function displayAction()
+    public function displayAction($id)
     {
-        $id = !empty($_GET["id"]) ? intval($_GET["id"]) : 0;
-        if (!$id) {
-            throw new Exception("Incorrect ID");
-        }
-
         $orders = new Orders();
         $orders->load('orders.xml');
         $order = $orders->getById($id);

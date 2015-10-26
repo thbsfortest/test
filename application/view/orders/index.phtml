@@ -15,7 +15,7 @@
             <td><?= $order->id ?></td>
             <td><?php echo $order->getDate($this->dateFormat); ?></td>
             <td><?php echo $order->getCustomer()->getName(); ?></td>
-            <td><a href="/orders/display?id=<?= $order->id ?>">View Order</a></td>
+            <td><a href="/orders/<?= $order->id ?>/">View Order</a></td>
         </tr>
     <?php } ?>
     </table>

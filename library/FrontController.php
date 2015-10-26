@@ -21,11 +21,23 @@
 class FrontController
 {
     /**
-     * Regular expression for the standard routing pattern
+     * Regular expressions for the routing patterns
      *
-     * @var string
+     * On good it should be like this:
+     * '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>'
+     * and transferred to the config
+     *
+     * @var array
      */
-    const ROUTE = '#^/(?P<controller>\w+)?(?:/(?P<action>\w+))?#';
+    private $_urlManager = array(
+        '#^/(?P<controller>\w+)?(?:/(?P<id>\d+))?#',
+        '#^/(?P<controller>\w+)?(?:/(?P<action>\w+))?#'
+    );
+
+    /**
+     * Default action for URL like /controller/ID
+     */
+    const DEFAULT_ACTION_FOR_ID = "display";
 
     /**
      * Default routing options
@@ -34,7 +46,8 @@ class FrontController
      */
     protected $_defaults = array(
         'controller' => 'default',
-        'action'     => 'index'
+        'action'     => 'index',
+        'id'         => 0,
     );
 
     /**
@@ -59,7 +72,13 @@ class FrontController
      */
     public function setRequest($requestUri)
     {
-        if (0 === preg_match(self::ROUTE, $requestUri, $matches)) {
+        $matches = false;
+        foreach ($this->_urlManager as $mask) {
+            if (0 !== preg_match($mask, $requestUri, $matches)) {
+                break;
+            }
+        }
+        if (!$matches) {
             throw new Exception("Cannot set request from URI $requestUri", 404);
         }
 
@@ -69,8 +88,9 @@ class FrontController
             'uri'             => $requestUri,
             'controller'      => $route['controller'],
             'controllerClass' => ucfirst($route['controller']) . 'Controller',
-            'action'          => $route['action'],
-            'actionMethod'    => $route['action'] . 'Action'
+            'action'          => $route['id'] ? self::DEFAULT_ACTION_FOR_ID : $route['action'],
+            'actionMethod'    => $route['id'] ? self::DEFAULT_ACTION_FOR_ID . 'Action' : $route['action'] . 'Action',
+            'id'              => $route['id'],
         );
 
         return $this;
@@ -100,6 +120,7 @@ class FrontController
         $request = $this->getRequest();
         $controllerClass = $request['controllerClass'];
         $action = $request['actionMethod'];
+        $id = intval($request['id']);
 
         if (!class_exists($controllerClass)) {
             throw new Exception("Cannot find controller \"$controllerClass\"", 404);
@@ -114,7 +135,12 @@ class FrontController
         $controllerInstance->preDispatch();
 
         // Call the action
-        $controllerInstance->$action();
+        if ($id) {
+            $controllerInstance->$action($id);
+        } else {
+            $controllerInstance->$action();
+        }
+
 
         $controllerInstance->postDispatch();
     }
