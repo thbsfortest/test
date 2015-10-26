@@ -57,7 +57,7 @@ class Application
     public function run()
     {
         try {
-            $this->_frontController->setRequest(isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/');
+            $this->_frontController->setRequest(isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/');
             $this->_frontController->dispatch();
         } catch (Exception $ex) {
             $this->_frontController->handleException($ex);
