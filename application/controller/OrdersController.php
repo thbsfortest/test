@@ -37,4 +37,42 @@ class OrdersController extends ControllerAbstract
         $view->orders = $orders;
         $view->dateFormat = 'd-m-y H:i:s';
     }
+
+    /**
+     * Display action
+     *
+     * The page needs to include all the attributes of the customer and details of all of the products in their order.
+     *
+     * @throws Exception
+     *
+     * @return void
+     */
+    public function displayAction()
+    {
+        $id = !empty($_GET["id"]) ? intval($_GET["id"]) : 0;
+        if (!$id) {
+            throw new Exception("Incorrect ID");
+        }
+
+        $orders = new Orders();
+        $orders->load('orders.xml');
+        $order = $orders->getById($id);
+        if (!$order) {
+            throw new Exception("Model is not found");
+        }
+
+        $view = $this->getView();
+        $view->order = $order;
+        $view->dateFormat = 'd-m-y H:i:s';
+
+        $view->customer = $order->getCustomer();
+        if (!$view->customer) {
+            throw new Exception("Customer is not found");
+        }
+
+        $view->products = $order->getProducts();
+        if (!$view->products) {
+            throw new Exception("Products is not found");
+        }
+    }
 }
