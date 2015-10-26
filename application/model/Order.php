@@ -27,6 +27,13 @@ class Order extends ModelAbstract
     protected $_customer;
 
     /**
+     * Associated products objects
+     *
+     * @var Product[]
+     */
+    protected $_products;
+
+    /**
      * Get the associated customer object
      *
      * This function loads the customer data and finds the matching customer
@@ -49,6 +56,30 @@ class Order extends ModelAbstract
         }
 
         return $this->_customer;
+    }
+
+    /**
+     * Get the associated products objects
+     *
+     * @return Product[]
+     */
+    public function getProducts()
+    {
+        if (null === $this->_products && isset($this->products)) {
+            $products = new Products();
+            $products->load('products.xml');
+
+            foreach ($products as $product) {
+                foreach ($this->products as $key => $value) {
+                    if ($product->id == $value) {
+                        $this->_products[] = $product;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return $this->_products;
     }
 
     /**
