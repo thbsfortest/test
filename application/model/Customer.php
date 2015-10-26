@@ -28,4 +28,14 @@ class Customer extends ModelAbstract
     {
         return implode(' ', $this->name);
     }
+
+    /**
+     * Get the customer's address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return implode(' ', $this->address);
+    }
 }
